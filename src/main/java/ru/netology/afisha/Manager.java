@@ -25,16 +25,18 @@ public class Manager {
     public String[] findAll() {
         return movies;
     }
-public String[] findLast(){
-    int resultSize;
-    if(limit < movies.length) {
-        resultSize = limit;
-    }else {resultSize = movies.length;
+
+    public String[] findLast() {
+        int resultSize;
+        if (limit < movies.length) {
+            resultSize = limit;
+        } else {
+            resultSize = movies.length;
+        }
+        String[] result = new String[resultSize];
+        for (int i = 0; i < resultSize; i++) {
+            result[i] = movies[movies.length - 1 - i];
+        }
+        return result;
     }
-String[] result = new String[resultSize];
-for(int i = 0;i< resultSize;i++){
-result[i] = movies[movies.length - 1 - i];
-}
-return result;
-}
 }

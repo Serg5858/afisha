@@ -6,9 +6,8 @@ import org.junit.jupiter.api.Test;
 public class ManagerTest {
 
 
-
     @Test
-    public void testAddedAll(){
+    public void testAddedAll() {
         String movie1 = "movie1";
         String movie2 = "movie2";
         String movie3 = "movie3";
@@ -21,7 +20,7 @@ public class ManagerTest {
         manager.add(movie4);
         manager.add(movie5);
 
-        String [] expected = {
+        String[] expected = {
                 movie1,
                 movie2,
                 movie3,
@@ -31,8 +30,9 @@ public class ManagerTest {
         String[] actual = manager.findAll();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
-    public void testAddedLastInLimit(){
+    public void testAddedLastInLimit() {
         String movie1 = "movie1";
         String movie2 = "movie2";
         String movie3 = "movie3";
@@ -45,7 +45,7 @@ public class ManagerTest {
         manager.add(movie4);
         manager.add(movie5);
 
-        String [] expected = {
+        String[] expected = {
                 movie5,
                 movie4,
                 movie3,
@@ -55,8 +55,9 @@ public class ManagerTest {
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
-    public void testAddedLastUnderLimit(){
+    public void testAddedLastUnderLimit() {
         String movie1 = "movie1";
         String movie2 = "movie2";
         String movie3 = "movie3";
@@ -69,7 +70,7 @@ public class ManagerTest {
         manager.add(movie4);
         manager.add(movie5);
 
-        String [] expected = {
+        String[] expected = {
                 movie5,
                 movie4,
                 movie3,
@@ -79,8 +80,9 @@ public class ManagerTest {
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
-    public void testAddedLastOnLimit(){
+    public void testAddedLastOnLimit() {
         String movie1 = "movie1";
         String movie2 = "movie2";
         String movie3 = "movie3";
@@ -93,7 +95,7 @@ public class ManagerTest {
         manager.add(movie4);
         manager.add(movie5);
 
-        String [] expected = {
+        String[] expected = {
                 movie5,
                 movie4,
                 movie3,
@@ -103,8 +105,9 @@ public class ManagerTest {
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
-    public void testAddedLastAboveBorderOnLimit(){
+    public void testAddedLastAboveBorderOnLimit() {
         String movie1 = "movie1";
         String movie2 = "movie2";
         String movie3 = "movie3";
@@ -117,7 +120,7 @@ public class ManagerTest {
         manager.add(movie4);
         manager.add(movie5);
 
-        String [] expected = {
+        String[] expected = {
                 movie5,
                 movie4,
                 movie3,
@@ -127,8 +130,9 @@ public class ManagerTest {
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
-    public void testAddedLastLessBorderOnLimit(){
+    public void testAddedLastLessBorderOnLimit() {
         String movie1 = "movie1";
         String movie2 = "movie2";
         String movie3 = "movie3";
@@ -138,8 +142,7 @@ public class ManagerTest {
         manager.add(movie1);
 
 
-
-        String [] expected = {
+        String[] expected = {
 
 
                 movie1,
